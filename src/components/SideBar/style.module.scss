@@ -1,0 +1,52 @@
+.sidebar{
+  padding: 0 20px 0 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px  ;
+  background: #3f3d3d;
+  width: 60px;
+  overflow: hidden;
+  transition: .2s;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+  button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    width: 63px;
+    cursor: pointer;
+  }
+  .active {
+    background: #c2bdbd;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .item {
+      position: relative;
+      font-size: 20px;color: #f1f1f1;
+      cursor: pointer;
+      .hoverLine {
+        position: absolute;
+        bottom: -8px; /* Расстояние от нижней границы элемента */
+        left: 0;
+        width: 0;
+        height: 6px; /* Толщина линии */
+        background-color: #f1f1f1; /* Цвет линии */
+        transition: width 0.3s ease; /* Анимация изменения ширины */
+        border-radius: 16px;
+      }
+    }
+    .item:hover .hoverLine {
+      width: 85%; /* При наведении линия расширяется от левого края до правого */
+    }
+    .hidden {
+      visibility: hidden;
+    }
+  }
+}
+.open {
+  width: 300px;
+}
