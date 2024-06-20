@@ -90,7 +90,7 @@ const CreateTest: React.FC = () => {
     location.pathname.includes("editTest")
       ? axiosBase.put(`/test/${id}`, formData).then(() => navigate("/"))
       : axiosBase.post(`/test/${id}`, formData).then(() => {
-          console.log(formData);
+          navigate(`/${id}`);
         });
   };
 
