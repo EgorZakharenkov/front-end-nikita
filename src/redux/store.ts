@@ -1,12 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { deviceReducer } from "./slices/DeviceSlice";
 import { authReducer } from "./slices/user";
-import { postReducer } from "./slices/post";
-import { heroReducer } from "./slices/hero";
 export const store = configureStore({
   reducer: {
+    device: deviceReducer,
     user: authReducer,
-    posts: postReducer,
-    hero: heroReducer,
   },
 });
 
